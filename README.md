@@ -1,1 +1,1 @@
-This project consists of creating a calculator by using everything I have lerant so far in HTML, CSS and JavaScript.
+This project consists of creating a calculator by using everything I have learnt so far in HTML, CSS and JavaScript.
