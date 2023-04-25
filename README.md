@@ -1,1 +1,1 @@
-# calculator
+This project consists of creating a calculator by using everything I have lerant so far in HTML, CSS and JavaScript.
