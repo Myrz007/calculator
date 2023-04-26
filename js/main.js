@@ -31,3 +31,14 @@ function divide(number) {
 
     return firstNumber;
 }
+
+function operate(operator, number) {
+    const operations = {
+        '+': add,
+        '-': subtract,
+        '*': multiply,
+        '÷': divide,
+    }
+
+    return operations[operator](parseFloat(number));
+}
