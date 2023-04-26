@@ -59,7 +59,10 @@ function operate(operator, number) {
         '+': add,
         '-': subtract,
         '*': multiply,
-        '÷': divide
+        '÷': divide,
+        '%': percentage,
+        '+/-': negativeNumber,
+        'Mod': modulo
     }
 
     return operations[operator](parseFloat(number));
