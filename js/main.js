@@ -32,12 +32,34 @@ function divide(number) {
     return firstNumber;
 }
 
+function modulo(number) {
+    if (number === 0) return 'To divide by zero is not defined';
+
+    if (!Number.isInteger(number)) return 'Modulo can only be defined with integers';
+
+    firstNumber %= number;
+
+    return firstNumber;
+}
+
+function percentage() {
+    firstNumber /= 100;
+
+    return firstNumber;
+}
+
+function negativeNumber() {
+    firstNumber = -firstNumber;
+
+    return firstNumber;
+}
+
 function operate(operator, number) {
     const operations = {
         '+': add,
         '-': subtract,
         '*': multiply,
-        '÷': divide,
+        '÷': divide
     }
 
     return operations[operator](parseFloat(number));
