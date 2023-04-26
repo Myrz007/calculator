@@ -2,7 +2,7 @@ const currentOp = document.getElementById('current-op');
 const buttons = document.querySelectorAll('button');
 
 let operation = '';
-let firstNumber = '';
+let firstNumber = 0;
 let operator = '';
 let secondNumber = '';
 
