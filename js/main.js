@@ -77,3 +77,5 @@ function populateDisplay(button) {
     operation += button.textContent;
     currentOp.value = operation;
 }
+
+buttons.forEach((button) => button.addEventListener('click', () => populateDisplay(button)));
