@@ -68,6 +68,13 @@ function operate(operator, number) {
     return operations[operator](parseFloat(number));
 }
 
+function handleOperations(button) {
+    if (firstNumber === 0) firstNumber = parseFloat(secondNumber);
+    else operate(operator, secondNumber);
+
+    operator = button.textContent;
+}
+
 function populateValue(button) {
     if (button.className === 'operator') secondNumber = '';
     else secondNumber += button.textContent;
