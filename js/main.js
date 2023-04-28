@@ -120,4 +120,4 @@ function handleButtons(button) {
     }
 }
 
-buttons.forEach((button) => button.addEventListener('click', () => populateDisplay(button)));
+buttons.forEach((button) => button.addEventListener('click', () => handleButtons(button)));
