@@ -90,4 +90,34 @@ function populateDisplay(button) {
     currentOp.value = operation;
 }
 
+function handleButtons(button) {
+    const buttonContent = button.textContent;
+    
+    if (buttonContent !== '=') {
+        if (buttonContent === '⌫') {
+            currentOp.value = '';
+            operation = '';
+            firstNumber = 0;
+            operator = '';
+            secondNumber = '';
+        }
+        else if (button.className === 'operator') {
+            handleOperations(button);
+            populateValue(button);
+            populateDisplay(button);
+        }
+        else {
+            populateValue(button);
+            populateDisplay(button);
+        }
+    }
+    else {
+        secondNumber = `${operate(operator, secondNumber)}`;
+        currentOp.value = secondNumber;
+        operation = secondNumber;
+        firstNumber = 0;
+        operator = '=';
+    }
+}
+
 buttons.forEach((button) => button.addEventListener('click', () => populateDisplay(button)));
