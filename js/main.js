@@ -76,14 +76,18 @@ function handleOperations(button) {
 }
 
 function populateValue(button) {
-    if (button.className === 'operator') secondNumber = '';
-    else secondNumber += button.textContent;
+    const buttonContent = button.textContent;
+
+    if (operator === '=') secondNumber = buttonContent;
+    else if (button.className === 'operator') secondNumber = '';
+    else secondNumber += buttonContent;
 }
 
 function populateDisplay(button) {
     const buttonContent = button.textContent;
 
-    if (buttonContent === '%' || buttonContent === '+/-') operation = `${firstNumber}`;
+    if (operator === '=') operation = buttonContent;
+    else if (buttonContent === '%' || buttonContent === '+/-') operation = `${firstNumber}`;
     else if (button.className === 'operator' && operator !== '') operation = `${firstNumber}${buttonContent}`;
     else operation += buttonContent;
 
