@@ -1,4 +1,4 @@
-const currentOp = document.getElementById('current-op');
+const display = document.getElementById('display');
 const buttons = document.querySelectorAll('button');
 
 let operation = '';
@@ -91,7 +91,7 @@ function populateDisplay(button) {
     else if (button.className === 'operator' && operator !== '') operation = `${firstNumber}${buttonContent}`;
     else operation += buttonContent;
 
-    currentOp.value = operation;
+    display.textContent = operation;
 }
 
 function handleButtons(button) {
@@ -99,7 +99,7 @@ function handleButtons(button) {
     
     if (buttonContent !== '=') {
         if (buttonContent === '⌫') {
-            currentOp.value = '';
+            display.textContent = '';
             operation = '';
             firstNumber = 0;
             operator = '';
@@ -117,7 +117,7 @@ function handleButtons(button) {
     }
     else {
         secondNumber = `${operate(operator, secondNumber)}`;
-        currentOp.value = secondNumber;
+        display.textContent = secondNumber;
         operation = secondNumber;
         firstNumber = 0;
         operator = '=';
