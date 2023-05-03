@@ -17,10 +17,16 @@ body {
 }
 
 #display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     height: 50px;
     width: 296px;
     margin-bottom: 10px;
-    text-align: end;
+    font-size: 24px;
+    background-color: #AECDAB;
+    border: solid 1px black;
+    border-radius: 4px;
 }
 
 #buttons {
