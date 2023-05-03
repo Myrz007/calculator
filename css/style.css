@@ -16,7 +16,7 @@ body {
     border-radius: 8px;
 }
 
-input {
+#display {
     height: 50px;
     width: 296px;
     margin-bottom: 10px;
