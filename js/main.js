@@ -78,21 +78,25 @@ function handleOperations(button) {
 function populateValue(button) {
     const buttonContent = button.textContent;
 
-    if (operator === '=') secondNumber = buttonContent;
-    else if (button.className === 'operator') secondNumber = '';
-    else secondNumber += buttonContent;
+    if (button.className === 'operator') secondNumber = '';
+    else {
+        if (operator === '=') secondNumber = buttonContent;
+        else secondNumber += buttonContent;
+    }
 }
 
 function populateDisplay(button) {
     const buttonContent = button.textContent;
 
-    if (operator === '=') {
-        operator = '';
-        operation = buttonContent;
-    }
-    else if (buttonContent === '%' || buttonContent === '+/-') operation = `${firstNumber}`;
+    if (buttonContent === '%' || buttonContent === '+/-') operation = `${firstNumber}`;
     else if (button.className === 'operator' && operator !== '') operation = `${firstNumber}${buttonContent}`;
-    else operation += buttonContent;
+    else {
+        if (operator === '=') {
+            operator = '';
+            operation = buttonContent;
+        }
+        else operation += buttonContent;
+    }
 
     display.textContent = operation;
 }
