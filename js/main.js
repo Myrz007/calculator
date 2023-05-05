@@ -7,19 +7,19 @@ let operator = '';
 let secondNumber = '';
 
 function add(number) {
-    firstNumber += number;
+    firstNumber += number || 0;
 
     return firstNumber;
 }
 
 function subtract(number) {
-    firstNumber -= number;
+    firstNumber -= number || 0;
 
     return firstNumber;
 }
 
 function multiply(number) {
-    firstNumber *= number;
+    firstNumber *= number || 1;
 
     return firstNumber;
 }
