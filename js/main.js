@@ -88,7 +88,7 @@ function populateValue(button) {
 function populateDisplay(button) {
     const buttonContent = button.textContent;
 
-    if (buttonContent === '%' || buttonContent === '+/-') operation = `${operate(buttonContent)}`;
+    if (buttonContent === '%' || buttonContent === '+/-') operation = `${firstNumber}`;
     else if (button.className === 'operator' && operator !== '') operation = `${firstNumber}${buttonContent}`;
     else {
         if (operator === '=') {
