@@ -23,7 +23,8 @@ function subtract(number) {
 }
 
 function multiply(number) {
-    firstNumber = roundThreeDecimals(firstNumber * (number || firstNumber));
+    if (number === 0) firstNumber = 0;
+    else firstNumber = roundThreeDecimals(firstNumber * (number || firstNumber));
 
     return firstNumber;
 }
