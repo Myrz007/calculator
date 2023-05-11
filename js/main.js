@@ -73,7 +73,7 @@ function operate(operator, number) {
 }
 
 function handleOperations(button) {
-    if (firstNumber === 0) firstNumber = parseFloat(secondNumber);
+    if (firstNumber === 0) firstNumber = parseFloat(secondNumber) || 0;
     else operate(operator, secondNumber);
 
     operator = button.textContent;
