@@ -23,7 +23,7 @@ function subtract(number) {
 }
 
 function multiply(number) {
-    firstNumber = roundThreeDecimals(firstNumber * (number || 0));
+    firstNumber = roundThreeDecimals(firstNumber * (number || firstNumber));
 
     return firstNumber;
 }
@@ -31,7 +31,7 @@ function multiply(number) {
 function divide(number) {
     if (number === 0) return 'To divide by zero is not defined';
 
-    firstNumber = roundThreeDecimals(firstNumber / number);
+    firstNumber = roundThreeDecimals(firstNumber / (number || firstNumber));
 
     return firstNumber;
 }
