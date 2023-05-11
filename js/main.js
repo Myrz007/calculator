@@ -69,7 +69,7 @@ function operate(operator, number) {
         'Mod': modulo
     }
 
-    return Math.round(operations[operator](parseFloat(number)) * 1000) / 1000;
+    return operations[operator](parseFloat(number));
 }
 
 function handleOperations(button) {
