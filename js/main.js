@@ -6,6 +6,10 @@ let firstNumber = 0;
 let operator = '';
 let secondNumber = '';
 
+function roundThreeDecimals(number) {
+    return Math.round(number * 1000) / 1000;
+}
+
 function add(number) {
     firstNumber += number || 0;
 
