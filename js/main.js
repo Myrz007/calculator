@@ -11,19 +11,19 @@ function roundThreeDecimals(number) {
 }
 
 function add(number) {
-    firstNumber += number || 0;
+    firstNumber = roundThreeDecimals(firstNumber + (number || 0));
 
     return firstNumber;
 }
 
 function subtract(number) {
-    firstNumber -= number || 0;
+    firstNumber = roundThreeDecimals(firstNumber - (number || 0));
 
     return firstNumber;
 }
 
 function multiply(number) {
-    firstNumber *= number || 1;
+    firstNumber = roundThreeDecimals(firstNumber * (number || 0));
 
     return firstNumber;
 }
@@ -31,7 +31,7 @@ function multiply(number) {
 function divide(number) {
     if (number === 0) return 'To divide by zero is not defined';
 
-    firstNumber /= number;
+    firstNumber = roundThreeDecimals(firstNumber / number);
 
     return firstNumber;
 }
