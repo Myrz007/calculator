@@ -123,7 +123,7 @@ function handleButtons(button) {
             operator = '';
             secondNumber = '';
         }
-        else if (button.className === 'operator') {
+        else if (button.className === 'operator' && buttonContent !== '%' && buttonContent !== '+/-') {
             handleOperations(button);
             populateValue(button);
             populateDisplay(button);
