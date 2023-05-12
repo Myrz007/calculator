@@ -84,9 +84,14 @@ function handleOperations(button) {
 function populateValue(button) {
     const buttonContent = button.textContent;
 
-    if (button.className === 'operator') secondNumber = '';
+    if (button.className === 'operator') {
+        if (buttonContent === '%') secondNumber = percentage();
+        else if (buttonContent === '+/-') secondNumber = negativeNumber();
+        else secondNumber = '';
+    }
     else {
         if (operator === '=') secondNumber = buttonContent;
+        else if (secondNumber === '0') secondNumber = buttonContent;
         else secondNumber += buttonContent;
     }
 }
