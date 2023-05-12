@@ -99,14 +99,14 @@ function populateValue(button) {
 function populateDisplay(button) {
     const buttonContent = button.textContent;
 
-    if (buttonContent === '%' || buttonContent === '+/-') operation = `${firstNumber}`;
-    else if (button.className === 'operator' && operator !== '') operation = `${firstNumber}${buttonContent}`;
+    if (button.className === 'operator' && buttonContent === '%' && buttonContent === '+/-' && operator !== '') operation = `${firstNumber}${buttonContent}`;
     else {
         if (operator === '=') {
             operator = '';
             operation = buttonContent;
         }
-        else operation += buttonContent;
+        else if (firstNumber === 0 && operator === '') operation = secondNumber;
+        else operation = `${firstNumber}${operator}${secondNumber}`;
     }
 
     display.textContent = operation;
