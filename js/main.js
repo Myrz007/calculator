@@ -72,10 +72,13 @@ function operate(operator, number) {
 }
 
 function handleOperations(button) {
+    const buttonContent = button.textContent;
+
     if (firstNumber === 0) firstNumber = parseFloat(secondNumber) || 0;
     else operate(operator, secondNumber);
 
-    operator = button.textContent;
+    if (buttonContent === '%' || buttonContent === '+/-') operator = operator;
+    else operator = buttonContent;
 }
 
 function populateValue(button) {
