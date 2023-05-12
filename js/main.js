@@ -48,15 +48,15 @@ function modulo(number) {
 }
 
 function percentage() {
-    firstNumber /= 100;
+    secondNumber = `${(parseFloat(secondNumber) || 0) / 100}`;
 
-    return firstNumber;
+    return secondNumber;
 }
 
 function negativeNumber() {
-    firstNumber = -firstNumber;
+    secondNumber = `${-(parseFloat(secondNumber) || 0)}`;
 
-    return firstNumber;
+    return secondNumber;
 }
 
 function operate(operator, number) {
@@ -65,8 +65,6 @@ function operate(operator, number) {
         '-': subtract,
         '*': multiply,
         '÷': divide,
-        '%': percentage,
-        '+/-': negativeNumber,
         'Mod': modulo
     }
 
