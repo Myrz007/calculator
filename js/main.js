@@ -89,6 +89,7 @@ function populateValue(button) {
         else if (buttonContent === '+/-') secondNumber = negativeNumber();
         else secondNumber = '';
     }
+    else if (buttonContent === '.' && secondNumber.includes('.')) secondNumber = secondNumber;
     else {
         if (operator === '=') secondNumber = buttonContent;
         else if (secondNumber === '0') secondNumber = buttonContent;
