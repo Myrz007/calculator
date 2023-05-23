@@ -23,10 +23,12 @@ body {
     height: 50px;
     width: 296px;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-family: monospace, sans-serif;
+    font-size: 32px;
     background-color: #AECDAB;
     border: solid 1px black;
     border-radius: 4px;
+    overflow-x: hidden;
 }
 
 #buttons {
